@@ -28,3 +28,5 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: QA
         run: make qa
+        env:
+          SQLALCHEMY_DATABASE_URL: sqlite:///./data/database.db
