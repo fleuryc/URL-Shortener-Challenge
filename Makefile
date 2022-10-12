@@ -64,7 +64,7 @@ requirements-dev.txt: check-system check-venv ## Create requirements-dev.txt fil
 
 requirements.txt: check-system check-venv ## Create requirements.txt file
 	@echo ">>> Creating 'requirements.txt' file..."
-	pip install --upgrade python-dotenv requests fastapi uvicorn sqlalchemy
+	pip install --upgrade requests fastapi uvicorn pydantic[dotenv] sqlalchemy
 	pip freeze | grep -v "pkg_resources" > requirements.txt
 	@echo ">>> OK."
 	@echo ""
@@ -85,6 +85,13 @@ deps: check-system check-venv requirements.txt ## Install dependencies with pip
 
 .PHONY: install
 install: check-system check-venv deps-dev deps ## Check system and venv, and install dependencies
+
+.PHONY: start
+start: ## Serve app with uvicorn
+	@echo ">>> Starting uvicorn server..."
+	uvicorn src.main:app --reload
+	@echo ">>> OK."
+	@echo ""
 
 .PHONY: isort
 isort: ## Sort imports with Isort

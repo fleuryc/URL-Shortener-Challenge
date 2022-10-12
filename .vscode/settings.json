@@ -12,5 +12,20 @@
     "**/.ipynb_checkpoints/**": true,
     "**/.mypy_cache/**": true,
     "**/.pytest_cache/**": true
-  }
+  },
+  "sqltools.useNodeRuntime": true,
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "name": "Short",
+      "database": "${workspaceFolder:em-test-clement-fleury}/data/database.db"
+    },
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "name": "Test",
+      "database": "${workspaceFolder:em-test-clement-fleury}/data/test.db"
+    }
+  ]
 }

@@ -47,7 +47,7 @@ source env/bin/activate
 ### Dependencies
 
 ```bash
-# pip install requests cerberus
+# pip install requests fastapi uvicorn pydantic[dotenv] sqlalchemy
 # > or :
 # pip install -r requirements.txt
 # > or just :
