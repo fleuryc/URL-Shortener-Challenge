@@ -18,10 +18,13 @@ The goal is to implement a basic URL shortener. See [`INSTRUCTIONS.md`](INSTRUCT
 - [Usage](#usage)
   - [Quality Assurance](#quality-assurance)
   - [URL shortening API](#url-shortening-api)
-    - [Database files](#database-files)
     - [Source files](#source-files)
-    - [Test files](#test-files)
     - [Run the API](#run-the-api)
+  - [Improvement ideas](#improvement-ideas)
+    - [Containerization](#containerization)
+    - [NoSQL database](#nosql-database)
+    - [API throttling](#api-throttling)
+    - [Short administraion](#short-administraion)
 
 ---
 
@@ -109,3 +112,25 @@ curl -X 'GET' \
   -H 'accept: application/json'
 # {"key":"fleuryc","url":"https://www.clementfleury.me"}
 ```
+
+### Improvement ideas
+
+#### Containerization
+
+Use Docker and Docker Compose to isolate and control each service's execution environment.
+
+#### NoSQL database
+
+Use a document-oriented NoSQL database (MongoDB, Couchbase, ...) for even more efficient storage and request performances.
+
+#### API throttling
+
+As a security measure to prevent DDoS attacks, the API could be ratelimited.
+
+#### Short administraion
+
+By providing a secret key at Short creation, we could add several administration features :
+
+- update / delete a Shrot
+- usage statistics
+- ...
