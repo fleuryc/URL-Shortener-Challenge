@@ -27,8 +27,6 @@ The goal is to implement a basic URL shortener. See [`INSTRUCTIONS.md`](INSTRUCT
 
 ## Architecture
 
-
-
 ## Installation
 
 ### Prerequisites
@@ -74,9 +72,40 @@ make qa
 #### Source files
 
 - `src/main.py` : API definition file
-
-#### Test files
-
-- `tests/test_main.py` : API tests file
+- `src/config.py` : Defines Pydantic Settings for use in app and tests.
+- `src/schemas.py` : Defines Pydantic validation model.
+- `src/database.py` : Defines SQLAlchemy entities.
+- `src/models.py` : Defines SQLAlchemy model.
+- `src/crud.py` : Defines Create, Read, Update and Delete database operations.
+- `src/utils.py` : Defines utility functions.
 
 #### Run the API
+
+Start the server :
+
+```bash
+# uvicorn src.main:app --reload
+# > or just :
+make start
+```
+
+> Now you can explore the documentation and test the API on your [local machine](http://127.0.0.1:8000/).
+
+Shorten a URL :
+
+```bash
+curl -X 'POST' \
+  'http://127.0.0.1:8000/?url=https%3A%2F%2Fwww.clementfleury.me' \
+  -H 'accept: application/json' \
+  -d ''
+# {"key":"fleuryc","url":"https://www.clementfleury.me"}
+```
+
+Get a URL :
+
+```bash
+curl -X 'GET' \
+  'http://127.0.0.1:8000/fleuryc' \
+  -H 'accept: application/json'
+# {"key":"fleuryc","url":"https://www.clementfleury.me"}
+```
