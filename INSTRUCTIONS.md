@@ -3,15 +3,15 @@
 ## Introduction: URL Shortening Service
 
 URL shortening services like bit.ly or TinyURL are very popular to generate shorter aliases (a.k.a “short links”) for long URLs. Users are redirected to the original URL when they hit these short links. Short links save a lot of space when displayed, printed, messaged, or tweeted. Additionally, users are less likely to mistype shorter URLs.
- 
-For example, shortening the given URL through TinyURL: 
 
-`https://stuart.com/blog/business/make-your-delivery-sustainable/`
+For example, shortening the given URL through TinyURL:
 
-We get the result given below 
+`https://foo.bar/fizzbuzz`
 
-`https://tinyurl.com/apwjcdw6`  
- 
+We get the result given below
+
+`https://tinyurl.com/apwjcdw6`
+
 As you can see, the shortened URL is less than half the size of the actual URL. URL shortening is typically used to optimize links across devices, track individual links to analyze audience, measure ad campaigns’ performance, or hide affiliated original URLs, to name a few use cases.
 
 ## Exercise
@@ -28,4 +28,3 @@ In your favourite language, write a working REST API software to shorten URLs. P
 
 
 Good luck! 🚀
-

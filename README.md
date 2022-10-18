@@ -1,8 +1,8 @@
-# Stuart - Coding Challenge: Engineering Manager
+# Coding Challenge: Engineering Manager
 
-[![Python application](https://github.com/StuartHiring/em-test-clement-fleury/actions/workflows/python-app.yml/badge.svg)](https://github.com/StuartHiring/em-test-clement-fleury/actions/workflows/python-app.yml)
+[![Python application](https://github.com/fleuryc/URL-Shortener-Challenge/actions/workflows/python-app.yml/badge.svg)](https://github.com/fleuryc/URL-Shortener-Challenge/actions/workflows/python-app.yml)
 
-This repository contains my submition to Stuart's coding challenge, as part of the hiring process for a Data Engineering Manager position.
+This repository contains my submition to a company's coding challenge, as part of the hiring process for a Data Engineering Manager position.
 
 The goal is to implement a basic URL shortener. See [`INSTRUCTIONS.md`](INSTRUCTIONS.md)
 

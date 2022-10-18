@@ -30,5 +30,5 @@ def generate_key(size: int = 5) -> str:
         str: random key string of size `size`
     """
     return "".join(
-        random.choices(string.ascii_uppercase + string.digits, k=size)  # nosec B311
+        random.choices(string.ascii_letters + string.digits, k=size)  # nosec B311
     )
